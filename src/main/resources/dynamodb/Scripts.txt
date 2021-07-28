@@ -1,0 +1,11 @@
+-- dynamodb identifiers are case sensitive and table name and attributes should match the entity
+
+aws dynamodb delete-table --table-name Author --region ap-south-1 --profile aws-local-admin --endpoint-url http://localhost:8000
+aws dynamodb delete-table --table-name Book --region ap-south-1 --profile aws-local-admin --endpoint-url http://localhost:8000
+aws dynamodb delete-table --table-name Lend --region ap-south-1 --profile aws-local-admin --endpoint-url http://localhost:8000
+aws dynamodb delete-table --table-name Member --region ap-south-1 --profile aws-local-admin --endpoint-url http://localhost:8000
+
+aws dynamodb create-table --attribute-definitions AttributeName=id,AttributeType=S --table-name Author --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --region ap-south-1 --output json --endpoint-url http://localhost:8000
+aws dynamodb create-table --attribute-definitions AttributeName=id,AttributeType=S --table-name Book --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --region ap-south-1 --output json --endpoint-url http://localhost:8000
+aws dynamodb create-table --attribute-definitions AttributeName=id,AttributeType=S --table-name Lend --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --region ap-south-1 --output json --endpoint-url http://localhost:8000
+aws dynamodb create-table --attribute-definitions AttributeName=id,AttributeType=S --table-name Member --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --region ap-south-1 --output json --endpoint-url http://localhost:8000

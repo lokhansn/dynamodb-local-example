@@ -1,4 +1,4 @@
-package com.sgl.dynamodblocalexample;
+package com.sgl.dynamodb.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,6 @@ public class DynamodbLocalExampleApplication {
     public static void main(String[] args) {
         SpringApplication.run(DynamodbLocalExampleApplication.class, args);
     }
+
 
 }

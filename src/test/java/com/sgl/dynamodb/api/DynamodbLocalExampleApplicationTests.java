@@ -1,4 +1,4 @@
-package com.sgl.dynamodblocalexample;
+package com.sgl.dynamodb.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
